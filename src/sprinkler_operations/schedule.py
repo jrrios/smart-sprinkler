@@ -12,10 +12,12 @@ def get_coa_json(address, property_type):
 
     r = requests.post(service_url, headers=headers, data=json.dumps(payload))
     request_json = r.json()
+    return request_json
 
 
 def get_if_watering_restricted(address, property_type, time):
     request_json = get_coa_json(address, property_type)
+    #import pdb; pdb.set_trace()
     day = request_json[0]
     times = request_json[1]
     allowed_time = times[u'Watering Times:']

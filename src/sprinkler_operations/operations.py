@@ -1,6 +1,7 @@
-from src.weather import watson_weather_model as weather
-from src.weather import geocoding as geocoding
+from weather import watson_weather_model as weather
+from weather import geocoding as geocoding
 from serially_arduino import ArduinoValues
+from datetime import *
 import schedule
 
 class Operations:
@@ -24,8 +25,8 @@ class Operations:
 
         return current_temp, recent_precip, forecast_precip
 
-    def get_water_restrictions(self):
-        restrictions = schedule.get_if_watering_restricted()
+    def get_water_restrictions(self,address_value, property_type):
+        restrictions = schedule.get_if_watering_restricted(address=address_value, property_type=property_type, time=datetime.now())
         return restrictions
 
     def get_arduino_values(self):

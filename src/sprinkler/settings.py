@@ -43,6 +43,10 @@ INSTALLED_APPS = (
 
     # imported apps
     'crispy_forms',
+
+    'sprinkler_operations',
+
+    'weather',
 )
 
 MIDDLEWARE_CLASSES = (
