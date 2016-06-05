@@ -6,7 +6,7 @@ import serial
 
 # Configure the serial
 ser = serial.Serial(
-        port='/dev/ttyACM0',
+        port='/dev/tty.usbmodem1421',
         baudrate=115200
 )
 

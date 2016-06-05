@@ -24,13 +24,13 @@ def get_if_watering_restriction(address, property_type, time):
 
     today = datetime.now().strftime('%A')
     if(allowed_day != today):
-        return false
+        return False
 
     start_time = datetime.strptime(time_array[0] + " " + time_array[1], '%I:%M %p')
     end_time = datetime.strptime(time_array[3] + " " + time_array[4], '%I:%M %p')
     current_time = datetime.now().hour
     if(current_time > start_time.hour and current_time < end_time.hour):
-        return true
+        return True
 
 
 def get_next_watering_time(address, property_type):
