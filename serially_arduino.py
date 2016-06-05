@@ -5,6 +5,7 @@ import serial
 class ArduinoValues:
     def __init__(self, port='/dev/ttyACM0', baudrate=115200):
         self.ser = serial.Serial(port=port, baudrate=baudrate)
+        time.sleep(2)
 
     def get_attr(self, input):
         # Arduino expects ending '\r\n'
@@ -36,5 +37,6 @@ class ArduinoValues:
     def get_all(self):
         return [self.get_attr(x) for x in ['light', 'moisture', 'status']]
 
-a = ArduinoValues()
-print(a.get_all())
+if __name__ == '__main__':
+    a = ArduinoValues()
+    print(a.get_all())
