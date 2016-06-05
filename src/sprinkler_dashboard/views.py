@@ -16,11 +16,13 @@ def dashboard(request):
 
     if request.POST and form.is_valid():
         operation = Operations()
-        current_temp, recent_precip, forecast_precip = operation.get_weather()
+        current_temp, forecast_high_temp, forecast_low_temp, recent_precip, forecast_precip = operation.get_weather()
 
         if form.is_valid():
             conditions = {
                 "current_temp": current_temp,
+                "forecast_high_temp": forecast_high_temp,
+                "forecast_low_temp": forecast_low_temp,
                 "recent_precip": recent_precip,
                 "forecast_precip": forecast_precip,
 

@@ -25,7 +25,7 @@ class Operations:
         forecast_min_temp = weather.get_min_forecast_temp(forecast)
         forecast_max_temp = weather.get_max_forecast_temp(forecast)
 
-        return current_temp, recent_precip, forecast_precip_str
+        return current_temp, forecast_max_temp, forecast_min_temp, recent_precip, forecast_precip_str
 
     def get_water_restrictions(self,address_value, property_type):
         restrictions = schedule.get_if_watering_restricted(address=address_value, property_type=property_type, time=datetime.now())

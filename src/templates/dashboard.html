@@ -71,7 +71,9 @@
             <div class="col-lg-12 text-center">
               <h2>STATUS</h2>
               <h2>Current Temp: {{conditions.current_temp}}</h2>
-                <h2>Recent Precip: {{conditions.recent_precip}}</h2>
+              <h2>Forecast Low Temp: {{conditions.forecast_low_temp}}</h2>
+              <h2>Forecast High Temp: {{conditions.forecast_high_temp}}</h2>
+                <h2>Recent Precip: {{conditions.recent_precip}} inches</h2>
                 <h2>Forecast Precip: {{conditions.forecast_precip}}%</h2>
                 <h2>Can I water my grass now? {% if restrictions == True %}} No {% else %}Yes{%  endif %}</h2>
               <h1 id="status_string"></h1>
