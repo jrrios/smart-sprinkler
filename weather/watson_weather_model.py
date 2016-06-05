@@ -15,6 +15,7 @@ service_base_url = 'https://' + service_username + ':' + service_password + '@' 
 
 
 def get_current_conditions(latitude, longitude):
+    service_url = service_base_url + '/observations/current?geocode=' + str(latitude) + '%2C' + str(longitude) + '&language=' + language_code + '&units=' +units_code
     response = requests.get(service_url)
     return json.loads(response.text)
 
