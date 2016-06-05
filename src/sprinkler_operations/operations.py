@@ -5,11 +5,11 @@ import schedule
 class Operations:
 
     def get_water_restrictions(self):
-        schedule.get_if_watering_restriction()
+        restrictions = schedule.get_if_watering_restriction()
+        return restrictions
 
     def get_arduino_values(self):
-        ard_values = ArduinoValues()
-ard_values = ArduinoValues()
-print(ard_values.get_arduino_attr())
+        a = ArduinoValues()
+        return a.get_all()
 
 

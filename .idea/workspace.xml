@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="63f2c3b0-4f5f-4b42-9a77-20e1825bc605" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sprinkler_operations/schedule.py" afterPath="$PROJECT_DIR$/src/sprinkler_operations/schedule.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/watson_weather_model.py" afterPath="$PROJECT_DIR$/weather/watson_weather_model.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serially_arduino.py" afterPath="$PROJECT_DIR$/serially_arduino.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sprinkler_operations/operations.py" afterPath="$PROJECT_DIR$/src/sprinkler_operations/operations.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sprinkler_operations/serially_arduino.py" afterPath="$PROJECT_DIR$/src/sprinkler_operations/serially_arduino.py" />
     </list>
     <ignored path="smart-sprinkler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,6 +22,7 @@
     <SUITE FILE_PATH="coverage/smart-sprinkler$watson_weather_model.coverage" NAME="watson_weather_model Coverage Results" MODIFIED="1465083207191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/weather" />
     <SUITE FILE_PATH="coverage/smart-sprinkler$operations.coverage" NAME="operations Coverage Results" MODIFIED="1465088080259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/sprinkler_operations" />
     <SUITE FILE_PATH="coverage/smart-sprinkler$rw_arduino__1_.coverage" NAME="rw-arduino (1) Coverage Results" MODIFIED="1465087073218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/smart-sprinkler$serially_arduino__1_.coverage" NAME="serially_arduino (1) Coverage Results" MODIFIED="1465091462292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/smart-sprinkler$middleIntepreter.coverage" NAME="middleIntepreter Coverage Results" MODIFIED="1465079035877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/sprinkler_operations" />
     <SUITE FILE_PATH="coverage/smart-sprinkler$rw_arduino.coverage" NAME="rw-arduino Coverage Results" MODIFIED="1465084905723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/smart-sprinkler$serially_arduino.coverage" NAME="serially_arduino Coverage Results" MODIFIED="1465087947390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/sprinkler_operations" />
@@ -34,14 +36,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="schedule.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sprinkler_operations/schedule.py">
+      <file leaf-file-name="operations.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sprinkler_operations/operations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54913294">
-              <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.2591171">
+              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,9 +71,10 @@
         <option value="$PROJECT_DIR$/src/sprinkler_dashboard/views.py" />
         <option value="$PROJECT_DIR$/src/weather_module.py" />
         <option value="$PROJECT_DIR$/rw-arduino.py" />
+        <option value="$PROJECT_DIR$/src/sprinkler_operations/schedule.py" />
+        <option value="$PROJECT_DIR$/serially_arduino.py" />
         <option value="$PROJECT_DIR$/src/sprinkler_operations/serially_arduino.py" />
         <option value="$PROJECT_DIR$/src/sprinkler_operations/operations.py" />
-        <option value="$PROJECT_DIR$/src/sprinkler_operations/schedule.py" />
       </list>
     </option>
   </component>
@@ -112,7 +113,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -141,7 +141,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="static_env" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-sprinkler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-sprinkler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-sprinkler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart-sprinkler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weather" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -163,22 +195,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-sprinkler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-sprinkler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart_sprinkler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -197,7 +216,7 @@
       <recent name="$PROJECT_DIR$/src/sprinkler_operations/weather" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.operations">
+  <component name="RunManager" selected="Python.serially_arduino (1)">
     <configuration default="false" name="operations" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -212,24 +231,6 @@
       <module name="smart-sprinkler" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/sprinkler_operations/operations.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="watson_weather_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/weather" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="smart-sprinkler" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/weather/watson_weather_model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -284,6 +285,24 @@
       <module name="smart-sprinkler" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/sprinkler_operations/serially_arduino.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="serially_arduino (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smart-sprinkler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/serially_arduino.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -530,18 +549,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Django server.smart-sprinkler" />
       <item index="1" class="java.lang.String" itemvalue="Python.operations" />
-      <item index="2" class="java.lang.String" itemvalue="Python.watson_weather_model" />
-      <item index="3" class="java.lang.String" itemvalue="Python.rw-arduino" />
-      <item index="4" class="java.lang.String" itemvalue="Python.rw-arduino (1)" />
-      <item index="5" class="java.lang.String" itemvalue="Python.serially_arduino" />
+      <item index="2" class="java.lang.String" itemvalue="Python.rw-arduino" />
+      <item index="3" class="java.lang.String" itemvalue="Python.rw-arduino (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.serially_arduino" />
+      <item index="5" class="java.lang.String" itemvalue="Python.serially_arduino (1)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.operations" />
-        <item index="1" class="java.lang.String" itemvalue="Python.serially_arduino" />
-        <item index="2" class="java.lang.String" itemvalue="Python.rw-arduino (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.rw-arduino" />
-        <item index="4" class="java.lang.String" itemvalue="Python.watson_weather_model" />
+        <item index="0" class="java.lang.String" itemvalue="Python.serially_arduino (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.operations" />
+        <item index="2" class="java.lang.String" itemvalue="Python.serially_arduino" />
+        <item index="3" class="java.lang.String" itemvalue="Python.rw-arduino (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.rw-arduino" />
       </list>
     </recent_temporary>
   </component>
@@ -557,17 +576,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27059773" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2746365" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827586" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32737276" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28275862" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28198075" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -584,42 +603,29 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sprinkler_dashboard/views.py">
+    <entry file="file://$PROJECT_DIR$/src/sprinkler_operations/schedule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03275109">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
           <folding>
-            <marker date="1465084479000" expanded="true" signature="86:243" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="0:61" placeholder="import ..." />
+            <marker date="1465090758000" expanded="true" signature="171:396" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="460:1079" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="1132:1158" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/weather/watson_weather_model.py">
+    <entry file="file://$PROJECT_DIR$/src/sprinkler_dashboard/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2783505">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding>
-            <marker date="1465084479000" expanded="true" signature="0:27" placeholder="import ..." />
-            <marker date="1465084479000" expanded="true" signature="515:749" placeholder="..." />
-            <marker date="1465084479000" expanded="true" signature="790:1026" placeholder="..." />
-            <marker date="1465084479000" expanded="true" signature="1061:1190" placeholder="..." />
-            <marker date="1465084479000" expanded="true" signature="1228:1396" placeholder="..." />
-            <marker date="1465084479000" expanded="true" signature="1440:1600" placeholder="..." />
-            <marker date="1465084479000" expanded="true" signature="1636:1796" placeholder="..." />
-            <marker date="1465084479000" expanded="true" signature="1831:1989" placeholder="..." />
-            <marker date="1465084479000" expanded="true" signature="2025:2134" placeholder="..." />
-            <marker date="1465084479000" expanded="true" signature="2178:2453" placeholder="..." />
-            <marker date="1465084479000" expanded="true" signature="2489:2721" placeholder="..." />
-            <marker date="1465084479000" expanded="true" signature="2760:2805" placeholder="..." />
-            <marker date="1465084479000" expanded="true" signature="2844:2889" placeholder="..." />
-            <marker date="1465084479000" expanded="true" signature="2948:3581" placeholder="..." />
-            <marker date="1465084479000" expanded="true" signature="3604:3818" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.03275109">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -717,9 +723,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8333333">
           <caret line="39" column="21" selection-start-line="15" selection-start-column="0" selection-end-line="39" selection-end-column="21" />
-          <folding>
-            <marker date="1465084853000" expanded="true" signature="74:99" placeholder="import ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -727,44 +731,100 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sprinkler_operations/operations.py">
+    <entry file="file://$PROJECT_DIR$/src/weather/geocoding.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37572256">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1465088532000" expanded="true" signature="57:99" placeholder="import ..." />
-            <marker date="1465088532000" expanded="true" signature="57:115" placeholder="import ..." />
-            <marker date="1465088532000" expanded="true" signature="134:292" placeholder="..." />
-            <marker date="1465088532000" expanded="true" signature="173:220" placeholder="..." />
-            <marker date="1465088532000" expanded="true" signature="255:292" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="0:31" placeholder="import ..." />
+            <marker date="1465090758000" expanded="true" signature="132:231" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="273:419" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="442:648" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sprinkler_operations/serially_arduino.py">
+    <entry file="file://$PROJECT_DIR$/src/weather/watson_weather_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.94219655">
-          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.14395393">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
           <folding>
-            <marker date="1465088403000" expanded="true" signature="0:25" placeholder="import ..." />
-            <marker date="1465088403000" expanded="true" signature="390:1407" placeholder="..." />
-            <marker date="1465088403000" expanded="true" signature="461:534" placeholder="..." />
-            <marker date="1465088403000" expanded="true" signature="567:1407" placeholder="..." />
+            <marker date="1465090758000" expanded="false" signature="0:46" placeholder="import ..." />
+            <marker date="1465090758000" expanded="true" signature="534:778" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="819:1065" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="1100:1233" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="1271:1441" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="1485:1646" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="1682:1845" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="1880:2039" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="2075:2186" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="2230:2508" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="2544:2778" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="2817:2862" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="2901:2946" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="2983:3717" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="3740:3877" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sprinkler_operations/schedule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54913294">
-          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.60655737">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1465090758000" expanded="true" signature="0:61" placeholder="import ..." />
+            <marker date="1465090758000" expanded="true" signature="171:396" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="460:1079" placeholder="..." />
+            <marker date="1465090758000" expanded="true" signature="1132:1158" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serially_arduino.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9077869">
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="17" />
+          <folding>
+            <marker date="1465091462000" expanded="true" signature="19:44" placeholder="import ..." />
+            <marker date="1465091462000" expanded="true" signature="66:1115" placeholder="..." />
+            <marker date="1465091462000" expanded="true" signature="137:200" placeholder="..." />
+            <marker date="1465091462000" expanded="true" signature="232:682" placeholder="..." />
+            <marker date="1465091462000" expanded="true" signature="717:803" placeholder="..." />
+            <marker date="1465091462000" expanded="true" signature="829:867" placeholder="..." />
+            <marker date="1465091462000" expanded="true" signature="896:937" placeholder="..." />
+            <marker date="1465091462000" expanded="true" signature="964:1003" placeholder="..." />
+            <marker date="1465091462000" expanded="true" signature="1027:1115" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sprinkler_operations/serially_arduino.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3852459">
+          <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
+          <folding>
+            <marker date="1465091779000" expanded="false" signature="0:25" placeholder="import ..." />
+            <marker date="1465091779000" expanded="true" signature="415:1464" placeholder="..." />
+            <marker date="1465091779000" expanded="true" signature="486:549" placeholder="..." />
+            <marker date="1465091779000" expanded="true" signature="581:1031" placeholder="..." />
+            <marker date="1465091779000" expanded="true" signature="1066:1152" placeholder="..." />
+            <marker date="1465091779000" expanded="true" signature="1178:1216" placeholder="..." />
+            <marker date="1465091779000" expanded="true" signature="1245:1286" placeholder="..." />
+            <marker date="1465091779000" expanded="true" signature="1313:1352" placeholder="..." />
+            <marker date="1465091779000" expanded="true" signature="1376:1464" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sprinkler_operations/operations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2591171">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -18,63 +18,41 @@ import serial
 #      'write on'
 #      'write off'
 
-class ArduinoValues():
+import time
+import serial
+
+class ArduinoValues:
     def __init__(self, port='/dev/tty.usbmodem1421', baudrate=115200):
-        self.laptop_serial = serial.Serial(port=port, baudrate=baudrate)
+        self.ser = serial.Serial(port=port, baudrate=baudrate)
 
-    def get_arduino_attr(self):
-        # if self.laptop_serial.is_open:
-        #     data = ("read {0}\r\n".format(data))
-        #     temp = "read light\r\n"
-        #     self.laptop_serial.write(temp)
-        #     time.sleep(0.3)
-        #     out = ''
-        #     while self.laptop_serial.inWaiting() > 0:
-        #         out += self.laptop_serial.read(1)
-        #         hello = 'debug'
-        #     return out
-        # else:
-        #     return "Error I can't connect Arduino :("
-
-        ser = self.laptop_serial
-        input=1
-        for i in range(0,2):
-            ser.write('read moisture' + '\r\n')
+    def get_attr(self, input):
+        for i in range(6):
+             # Arduino expects ending '\r\n'
+            input = 'read ' + input + '\r\n'
+            # send to the Arduino
+            self.ser.write(input)
             out = ''
             # give device time to answer
-            time.sleep(0.2)
-            while ser.inWaiting() > 0:
-                out += ser.read(1)
+            time.sleep(0.1)
+            while self.ser.inWaiting() > 0:
+                out += self.ser.read(1)
             # output response
             if out != '':
-                print out
+                return out.strip()
 
-# a = ArduinoValues()
-# a.get_arduino_attr()
+    def set_sprinkler(self, val):
+        out = 'write on' if val else 'write off'
+        self.ser.write(out + '\r\n')
 
+    def get_light(self):
+        return self.get_attr('light')
 
-# input=1
-# while ser.isOpen():
-#     # Get keyboard input
-#     input = raw_input(">> ")
-#     if input == 'exit':
-#         ser.close()
-#         exit()
-#     elif input == 'help':
-#         print 'Possible commands:'
-#         print '\tread light'
-#         print '\tread moisture'
-#         print '\tread status'
-#         print '\twrite on'
-#         print '\twrite off'
-#     else:
-#         # send to the Arduino
-#         ser.write(input + '\r\n')
-#         out = ''
-#         # give device time to answer
-#         time.sleep(0.2)
-#         while ser.inWaiting() > 0:
-#             out += ser.read(1)
-#         # output response
-#         if out != '':
-#             print out
+    def get_moisture(self):
+        return self.get_attr('moisture')
+
+    def get_status(self):
+        return self.get_attr('status')
+
+    def get_all(self):
+
+        return [self.get_attr(x) for x in ['moisture', 'status', 'moisture', 'light']]
