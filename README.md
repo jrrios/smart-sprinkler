@@ -11,3 +11,9 @@ This system monitors key metrics and information sources to keep their grass gro
 
 #City Friendly Water System 
 We scrape the data from the Austin Water regulation to check if there are water usage restrictions in Austin or not to see if it is a good time to water your grass.
+
+#Required Libraries Python 2.7
+Most of the project is done in python, Arduino, and Django code. To install the python libraries use pip install for the following:
+- pip install googlemaps
+- pip install requests 
+- pip install datetime 
