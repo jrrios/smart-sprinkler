@@ -5,6 +5,11 @@ from datetime import *
 import schedule
 
 class Operations:
+    def __init__(self):
+        try:
+            self.arduino = ArduinoValues()
+        except:
+            self.arduino = None
 
     def get_weather(self):
         address = "St. Edwards University, Austin, TX"
@@ -30,7 +35,7 @@ class Operations:
         return restrictions
 
     def get_arduino_values(self):
-        a = ArduinoValues()
-        return a.get_all()
-
-
+        try:
+            return self.arduino.get_all()
+        except:
+            return None

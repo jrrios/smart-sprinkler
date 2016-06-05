@@ -26,11 +26,17 @@ def dashboard(request):
 
             }
 
-            context ["conditions"]=conditions
+            context["conditions"]=conditions
             context['restrictions'] = operation.get_water_restrictions(
                 form.cleaned_data['address_digit'],
                 form.cleaned_data['property_type']
             )
+            arduino_vals=operation.get_arduino_values()
+            if not arduino_vals:
+                arduino_vals = ['Not connected.'] * 2
+
+            context['arduino_light']=arduino_vals[0]
+            context['arduino_moisture']=arduino_vals[1]
 
             print conditions
 
