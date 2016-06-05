@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63f2c3b0-4f5f-4b42-9a77-20e1825bc605" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sprinkler_operations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sprinkler_operations/serially_arduino.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/schedule.py" afterPath="$PROJECT_DIR$/src/sprinkler_operations/schedule.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rw-arduino.py" afterPath="$PROJECT_DIR$/rw-arduino.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sprinkler_operations/operations.py" afterPath="$PROJECT_DIR$/src/sprinkler_operations/operations.py" />
     </list>
     <ignored path="smart-sprinkler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,8 +22,11 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/smart-sprinkler$watson_weather_model.coverage" NAME="watson_weather_model Coverage Results" MODIFIED="1465083207191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/weather" />
-    <SUITE FILE_PATH="coverage/smart-sprinkler$operations.coverage" NAME="operations Coverage Results" MODIFIED="1465079402670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/sprinkler_operations" />
+    <SUITE FILE_PATH="coverage/smart-sprinkler$operations.coverage" NAME="operations Coverage Results" MODIFIED="1465088080259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/sprinkler_operations" />
+    <SUITE FILE_PATH="coverage/smart-sprinkler$rw_arduino__1_.coverage" NAME="rw-arduino (1) Coverage Results" MODIFIED="1465087073218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/smart-sprinkler$middleIntepreter.coverage" NAME="middleIntepreter Coverage Results" MODIFIED="1465079035877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/sprinkler_operations" />
+    <SUITE FILE_PATH="coverage/smart-sprinkler$rw_arduino.coverage" NAME="rw-arduino Coverage Results" MODIFIED="1465084905723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/smart-sprinkler$serially_arduino.coverage" NAME="serially_arduino Coverage Results" MODIFIED="1465087947390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/sprinkler_operations" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -29,13 +37,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="operations.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sprinkler_operations/operations.py">
+      <file leaf-file-name="schedule.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sprinkler_operations/schedule.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0927835">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state vertical-scroll-proportion="2.3214285">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
               <folding>
-                <element signature="e#0#55#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,7 +65,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/middleIntepreter.py" />
-        <option value="$PROJECT_DIR$/src/sprinkler_operations/schedule.py" />
         <option value="$PROJECT_DIR$/src/sprinkler/settings.py" />
         <option value="$PROJECT_DIR$/src/sprinkler_operations/middleIntepreter.py" />
         <option value="$PROJECT_DIR$/src/sprinkler_operations/__init__.py" />
@@ -66,6 +73,9 @@
         <option value="$PROJECT_DIR$/src/weather/weather_module.py" />
         <option value="$PROJECT_DIR$/src/sprinkler_dashboard/views.py" />
         <option value="$PROJECT_DIR$/src/weather_module.py" />
+        <option value="$PROJECT_DIR$/rw-arduino.py" />
+        <option value="$PROJECT_DIR$/src/sprinkler_operations/serially_arduino.py" />
+        <option value="$PROJECT_DIR$/src/sprinkler_operations/schedule.py" />
         <option value="$PROJECT_DIR$/src/sprinkler_operations/operations.py" />
       </list>
     </option>
@@ -152,24 +162,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="weather" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-sprinkler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart-sprinkler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="sprinkler_operations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -184,11 +176,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sprinkler_dashboard" />
+              <option name="myItemId" value="smart_sprinkler" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -207,30 +195,12 @@
       <recent name="$PROJECT_DIR$/src/sprinkler_operations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/sprinkler_operations" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/sprinkler_operations/weather" />
-      <recent name="$PROJECT_DIR$/src/sprinkler_operations" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.watson_weather_model">
-    <configuration default="false" name="middleIntepreter" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/sprinkler_operations" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="smart-sprinkler" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/sprinkler_operations/middleIntepreter.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.operations">
     <configuration default="false" name="operations" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -263,6 +233,60 @@
       <module name="smart-sprinkler" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/weather/watson_weather_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="rw-arduino" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smart-sprinkler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/sprinkler_operations/rw-arduino.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="rw-arduino (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smart-sprinkler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rw-arduino.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="serially_arduino" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/sprinkler_operations" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="smart-sprinkler" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/sprinkler_operations/serially_arduino.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -506,17 +530,21 @@
       <option name="customRunCommand" value="" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Django server.smart-sprinkler" />
-      <item index="1" class="java.lang.String" itemvalue="Python.middleIntepreter" />
-      <item index="2" class="java.lang.String" itemvalue="Python.operations" />
-      <item index="3" class="java.lang.String" itemvalue="Python.watson_weather_model" />
+      <item index="1" class="java.lang.String" itemvalue="Python.operations" />
+      <item index="2" class="java.lang.String" itemvalue="Python.watson_weather_model" />
+      <item index="3" class="java.lang.String" itemvalue="Python.rw-arduino" />
+      <item index="4" class="java.lang.String" itemvalue="Python.rw-arduino (1)" />
+      <item index="5" class="java.lang.String" itemvalue="Python.serially_arduino" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.watson_weather_model" />
-        <item index="1" class="java.lang.String" itemvalue="Python.operations" />
-        <item index="2" class="java.lang.String" itemvalue="Python.middleIntepreter" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.operations" />
+        <item index="1" class="java.lang.String" itemvalue="Python.serially_arduino" />
+        <item index="2" class="java.lang.String" itemvalue="Python.rw-arduino (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.rw-arduino" />
+        <item index="4" class="java.lang.String" itemvalue="Python.watson_weather_model" />
       </list>
     </recent_temporary>
   </component>
@@ -542,7 +570,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827586" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32965517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.8827586" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -558,29 +586,18 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/schedule.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0927835">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-          <folding>
-            <marker date="1465083004000" expanded="true" signature="0:61" placeholder="import ..." />
-            <marker date="1465083004000" expanded="true" signature="171:396" placeholder="..." />
-            <marker date="1465083004000" expanded="true" signature="461:1090" placeholder="..." />
-            <marker date="1465083004000" expanded="true" signature="1144:1170" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sprinkler_dashboard/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.03275109">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <marker date="1465083566000" expanded="true" signature="86:243" placeholder="..." />
+            <marker date="1465084479000" expanded="true" signature="86:243" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -590,31 +607,158 @@
         <state vertical-scroll-proportion="0.2783505">
           <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
           <folding>
-            <marker date="1465084003000" expanded="true" signature="0:27" placeholder="import ..." />
-            <marker date="1465084003000" expanded="true" signature="515:749" placeholder="..." />
-            <marker date="1465084003000" expanded="true" signature="790:1026" placeholder="..." />
-            <marker date="1465084003000" expanded="true" signature="1061:1190" placeholder="..." />
-            <marker date="1465084003000" expanded="true" signature="1228:1396" placeholder="..." />
-            <marker date="1465084003000" expanded="true" signature="1440:1600" placeholder="..." />
-            <marker date="1465084003000" expanded="true" signature="1636:1796" placeholder="..." />
-            <marker date="1465084003000" expanded="true" signature="1831:1989" placeholder="..." />
-            <marker date="1465084003000" expanded="true" signature="2025:2134" placeholder="..." />
-            <marker date="1465084003000" expanded="true" signature="2178:2453" placeholder="..." />
-            <marker date="1465084003000" expanded="true" signature="2489:2721" placeholder="..." />
-            <marker date="1465084003000" expanded="true" signature="2760:2805" placeholder="..." />
-            <marker date="1465084003000" expanded="true" signature="2844:2889" placeholder="..." />
-            <marker date="1465084003000" expanded="true" signature="2948:3581" placeholder="..." />
-            <marker date="1465084003000" expanded="true" signature="3604:3818" placeholder="..." />
+            <marker date="1465084479000" expanded="true" signature="0:27" placeholder="import ..." />
+            <marker date="1465084479000" expanded="true" signature="515:749" placeholder="..." />
+            <marker date="1465084479000" expanded="true" signature="790:1026" placeholder="..." />
+            <marker date="1465084479000" expanded="true" signature="1061:1190" placeholder="..." />
+            <marker date="1465084479000" expanded="true" signature="1228:1396" placeholder="..." />
+            <marker date="1465084479000" expanded="true" signature="1440:1600" placeholder="..." />
+            <marker date="1465084479000" expanded="true" signature="1636:1796" placeholder="..." />
+            <marker date="1465084479000" expanded="true" signature="1831:1989" placeholder="..." />
+            <marker date="1465084479000" expanded="true" signature="2025:2134" placeholder="..." />
+            <marker date="1465084479000" expanded="true" signature="2178:2453" placeholder="..." />
+            <marker date="1465084479000" expanded="true" signature="2489:2721" placeholder="..." />
+            <marker date="1465084479000" expanded="true" signature="2760:2805" placeholder="..." />
+            <marker date="1465084479000" expanded="true" signature="2844:2889" placeholder="..." />
+            <marker date="1465084479000" expanded="true" signature="2948:3581" placeholder="..." />
+            <marker date="1465084479000" expanded="true" signature="3604:3818" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/site-packages/serial/serialutil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33179724">
+          <caret line="517" column="0" selection-start-line="517" selection-start-column="0" selection-end-line="517" selection-end-column="0" />
+          <folding>
+            <marker date="1465084895000" expanded="false" signature="240:261" placeholder="import ..." />
+            <marker date="1465084895000" expanded="true" signature="804:868" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="1251:1511" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="1678:2334" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="2834:2891" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="2940:2983" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="3159:18642" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="3164:3276" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1465084895000" expanded="true" signature="4277:5963" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="4286:4479" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1465084895000" expanded="true" signature="6241:6407" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="6250:6381" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1465084895000" expanded="true" signature="6451:6868" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="6460:6501" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1465084895000" expanded="true" signature="6907:6986" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="7042:7652" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="7051:7290" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1465084895000" expanded="true" signature="7691:7770" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="7826:8074" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="8111:8185" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="8235:8476" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="8515:8594" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="8650:8906" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="8944:9020" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="9073:9558" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="9602:9684" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="9749:10241" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="10290:10393" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="10471:10997" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="11035:11112" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="11165:11298" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="11335:11423" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="11473:11616" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="11653:11741" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="11796:12161" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="12195:12226" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="12269:12363" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="12397:12428" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="12471:12565" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="12611:12644" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="12711:12809" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="12972:13173" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="12981:13141" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1465084895000" expanded="true" signature="13239:13343" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="13648:13850" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="13657:13763" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1465084895000" expanded="true" signature="13884:14340" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="13893:14093" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1465084895000" expanded="true" signature="14444:14921" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="15114:15134" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="15159:15179" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="15204:15225" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="15253:15537" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="15664:15684" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="15726:15747" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="15868:16148" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="15877:15982" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1465084895000" expanded="true" signature="16307:16341" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="16369:16404" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="16430:16461" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="16502:16536" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="16568:16593" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="16625:16650" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="16673:16697" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="16720:16744" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="16766:16789" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="16811:16834" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="16864:16889" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="16932:16966" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="17029:17066" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="17113:17152" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="17232:17283" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="17315:17350" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="17387:17418" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="17441:17469" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="17604:17739" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="17613:17697" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1465084895000" expanded="true" signature="17792:18323" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="17801:17941" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1465084895000" expanded="true" signature="18368:18642" placeholder="..." />
+            <marker date="1465084895000" expanded="true" signature="18377:18500" placeholder="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rw-arduino.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8333333">
+          <caret line="39" column="21" selection-start-line="15" selection-start-column="0" selection-end-line="39" selection-end-column="21" />
+          <folding>
+            <marker date="1465084853000" expanded="true" signature="74:99" placeholder="import ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sprinkler_operations/operations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0927835">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.21604939">
+          <caret line="7" column="45" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
           <folding>
-            <element signature="e#0#55#0" expanded="true" />
+            <marker date="1465088532000" expanded="true" signature="57:99" placeholder="import ..." />
+            <marker date="1465088532000" expanded="true" signature="57:115" placeholder="import ..." />
+            <marker date="1465088532000" expanded="true" signature="134:292" placeholder="..." />
+            <marker date="1465088532000" expanded="true" signature="173:220" placeholder="..." />
+            <marker date="1465088532000" expanded="true" signature="255:292" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sprinkler_operations/serially_arduino.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41505376">
+          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+          <folding>
+            <marker date="1465088403000" expanded="true" signature="0:25" placeholder="import ..." />
+            <marker date="1465088403000" expanded="true" signature="390:1407" placeholder="..." />
+            <marker date="1465088403000" expanded="true" signature="461:534" placeholder="..." />
+            <marker date="1465088403000" expanded="true" signature="567:1407" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sprinkler_operations/schedule.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.3214285">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
