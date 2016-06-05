@@ -38,8 +38,11 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    #created apps
+    # created apps
     'sprinkler_dashboard',
+
+    # imported apps
+    'crispy_forms',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -102,6 +105,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 STATIC_URL = '/static/' 
 
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_env")
