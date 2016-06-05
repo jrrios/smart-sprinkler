@@ -122,4 +122,4 @@ def example_usage():
     example_for_location("McMurdo Station, Antartica")
     example_for_location("Gobi Desert")
 
-example_usage()
+#example_usage()
