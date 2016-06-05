@@ -22,13 +22,13 @@ def get_if_watering_restricted(address, property_type, time):
     time_array = allowed_time.split(" ")
     allowed_day = day[u'Watering Day:']
 
-    today = datetime.now().strftime('%A')
+    today = time.strftime('%A')
     if(allowed_day != today):
         return false
 
     start_time = datetime.strptime(time_array[0] + " " + time_array[1], '%I:%M %p').hour
     end_time = datetime.strptime(time_array[3] + " " + time_array[4], '%I:%M %p').hour
-    current_time = datetime.now().hour
+    current_time = time.hour
 
 
     #This is really hacky, don't do this
