@@ -1,11 +1,13 @@
 # smart-sprinkler
-This is the bases for a smart sprinkler system where we are using an sensors and arduino to allow people to effeciently and environmentally friendly water their grass. This system monitors key information to keep their grass growing and thriving. 
-Such as
+This project forms the basis for a smart sprinkler system where we use sensors and an arduino to allow people to efficiently water their lawn and gardens in an environmentally friendly manner.
+
+This system monitors key metrics and information sources to keep their grass growing and thriving, such as
 - Moisture Level
 - Sunlight
-- Current Weather 
+- Current Weather
+- Recent Rain
 - Probablility of Rain
 - Checks the Austin Water Regulatory system 
 
 #City Friendly Water System 
-We scrape the data from the Austin Water regulation to check if there is a water shortage in Austin or not to see if it is a good time to water your grass. 
+We scrape the data from the Austin Water regulation to check if there are water usage restrictions in Austin or not to see if it is a good time to water your grass.
