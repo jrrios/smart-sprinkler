@@ -14,7 +14,7 @@ def get_coa_json(address, property_type):
     request_json = r.json()
 
 
-def get_if_watering_restriction(address, property_type, time):
+def get_if_watering_restricted(address, property_type, time):
     request_json = get_coa_json(address, property_type)
     day = request_json[0]
     times = request_json[1]
@@ -26,10 +26,19 @@ def get_if_watering_restriction(address, property_type, time):
     if(allowed_day != today):
         return false
 
-    start_time = datetime.strptime(time_array[0] + " " + time_array[1], '%I:%M %p')
-    end_time = datetime.strptime(time_array[3] + " " + time_array[4], '%I:%M %p')
+    start_time = datetime.strptime(time_array[0] + " " + time_array[1], '%I:%M %p').hour
+    end_time = datetime.strptime(time_array[3] + " " + time_array[4], '%I:%M %p').hour
     current_time = datetime.now().hour
-    if(current_time > start_time.hour and current_time < end_time.hour):
+
+
+    #This is really hacky, don't do this
+    # SHAME SHAME SHAME
+    if(end_time.hour < start_time.hour):
+        end_time = end_time + 24
+        if(current_time < start_time):
+            current_time = current_time + 24
+
+    if(current_time > start_time and current_time < end_time):
         return true
 
 
