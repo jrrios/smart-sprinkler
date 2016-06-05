@@ -1,23 +1,4 @@
-import time
-import serial
-
-
-# ser = serial.Serial(
-#         port='/dev/tty.usbmodem1421',
-#         baudrate=115200
-# )
-
-#print 'Enter your commands below.'
-#print 'Insert "exit" to leave the application or "help" for a list of commands.'
-
-#
-# 'Possible commands:'
-#      'read light'
-#      'read moisture'
-#      'read status'
-#      'write on'
-#      'write off'
-
+#!/usr/bin/python2
 import time
 import serial
 
@@ -56,3 +37,6 @@ class ArduinoValues:
     def get_all(self):
 
         return [self.get_attr(x) for x in ['moisture', 'status', 'moisture', 'light']]
+
+a = ArduinoValues()
+print(a.get_all())
