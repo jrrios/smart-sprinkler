@@ -1,5 +1,6 @@
 import requests
 import json
+import geocoding
 
 # Local variables (hardcoded for now)
 language_code = 'en-US'
@@ -14,23 +15,23 @@ service_base_url = 'https://' + service_username + ':' + service_password + '@' 
 
 
 def get_current_conditions(latitude, longitude):
-    service_url = service_base_url + '/observations/current?geocode=' + latitude + '%2C' + longitude + '&language=' + language_code + '&units=' +units_code
+    service_url = service_base_url + '/observations/current?geocode=' + str(latitude) + '%2C' + str(longitude) + '&language=' + language_code + '&units=' +units_code
     response = requests.get(service_url)
     return json.loads(response.text)
 
 
 def get_forecast(latitude, longitude):
-    service_url = service_base_url + '/forecast/hourly/24hour?geocode=' + latitude + '%2C' + longitude + '&language=' + language_code + '&units=' +units_code
+    service_url = service_base_url + '/forecast/hourly/24hour?geocode=' + str(latitude) + '%2C' + str(longitude) + '&language=' + language_code + '&units=' +units_code
     response = requests.get(service_url)
     return json.loads(response.text)
 
 
 def get_measurement_type(units):
     return {
-        'e': 'imperial',
-        'h': 'uk_hybrid',
-        'm': 'metric',
-        's': 'metric_si'
+        'e': u'imperial',
+        'h': u'uk_hybrid',
+        'm': u'metric',
+        's': u'metric_si'
         }[units]
 
 
@@ -39,53 +40,53 @@ def get_recent_precip_range(hours):
         return 'precip_1hour'
     else:
         if hours <= 6 :
-            return 'precip_6hour'
+            return u'precip_6hour'
         else :
-            return 'precip_24hour'
+            return u'precip_24hour'
 
 
 def get_recent_precipitation(conditions):
     measurement = get_measurement_type(units_code)
     range = get_recent_precip_range(forecast_range)
-    return conditions['observation'][measurement][range]
+    return conditions[u'observation'][measurement][range]
 
 
 def get_recent_snow_range(hours):
     if hours <= 1:
-        return 'snow_1hour'
+        return u'snow_1hour'
     else:
         if hours <= 6:
-            return 'snow_6hour'
+            return u'snow_6hour'
         else :
-            return 'snow_24hour'
+            return u'snow_24hour'
 
 
 def get_recent_snow(conditions):
     measurement = get_measurement_type(units_code)
     range = get_recent_snow_range(forecast_range)
-    return conditions['observation'][measurement][range]
+    return conditions[u'observation'][measurement][range]
 
 
 def get_current_temp(conditions):
     measurement = get_measurement_type(units_code)
-    return conditions['observation'][measurement]['temp']
+    return conditions[u'observation'][measurement][u'temp']
 
 
 def get_forecast_precipitation(forecast):
     measurement = get_measurement_type(units_code)
-    forecasts = forecast['forecasts']
+    forecasts = forecast[u'forecasts']
     precip = []
     for index in range(0, min(forecast_range, len(forecasts))):
-        precip.append(forecasts[index]['precip_type']+":"+str(forecasts[index]['pop']))
+        precip.append(forecasts[index][u'precip_type']+":"+str(forecasts[index][u'pop']))
     return precip
 
 
 def get_forecast_temps(forecast):
     measurement = get_measurement_type(units_code)
-    forecasts = forecast['forecasts']
+    forecasts = forecast[u'forecasts']
     temps = []
     for index in range(0, min(forecast_range, len(forecasts))):
-        temps.append(forecasts[index]['temp'])
+        temps.append(forecasts[index][u'temp'])
     return temps
 
 
@@ -97,8 +98,11 @@ def get_max_forecast_temp(forecast):
     return max(get_forecast_temps(forecast))
 
 
-def example_for_location(location, latitude, longitude):
-    print("\nWeather Conditions at "+location)
+def example_for_location(address):
+    print("\nWeather Conditions at "+address)
+    place = geocoding.get_lat_lon(address)
+    latitude = place[u'lat']
+    longitude = place[u'lng']
 
     conditions = get_current_conditions(latitude, longitude)
     print 'Current temp:', get_current_temp(conditions)
@@ -112,8 +116,8 @@ def example_for_location(location, latitude, longitude):
 
 
 def example_usage():
-    example_for_location("Austin, Texas", '30.2672', '-97.7431')
-    example_for_location("McMurdo Station, Antartica", '-77.8419', '166.6863')
-    example_for_location("Gobi Desert, China", '42.5900', '103.4300')
+    example_for_location("Austin, Texas")
+    example_for_location("McMurdo Station, Antartica")
+    example_for_location("Gobi Desert")
 
 example_usage()
