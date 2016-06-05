@@ -21,10 +21,11 @@ class Operations:
 
         forecast = weather.get_forecast(latitude, longitude)
         forecast_precip = weather.get_forecast_precipitation(forecast)
+        forecast_precip_str = forecast_precip[0]+" "+str(forecast_precip[1])
         forecast_min_temp = weather.get_min_forecast_temp(forecast)
         forecast_max_temp = weather.get_max_forecast_temp(forecast)
 
-        return current_temp, recent_precip, forecast_precip
+        return current_temp, recent_precip, forecast_precip_str
 
     def get_water_restrictions(self,address_value, property_type):
         restrictions = schedule.get_if_watering_restricted(address=address_value, property_type=property_type, time=datetime.now())

@@ -75,14 +75,23 @@ def get_current_temp(conditions):
     return conditions[u'observation'][measurement][u'temp']
 
 
-def get_forecast_precipitation(forecast):
+def get_forecast_precipitation_range(forecast):
     measurement = get_measurement_type(units_code)
     forecasts = forecast[u'forecasts']
     precip = []
+    # Grab the precip type and percentage for the given range of hours
     for index in range(0, min(forecast_range, len(forecasts))):
-        precip.append(forecasts[index][u'precip_type']+":"+str(forecasts[index][u'pop']))
+        precip.append((forecasts[index][u'precip_type'],forecasts[index][u'pop']))
     return precip
 
+
+def get_forecast_precipitation(forecast):
+    precip_range = get_forecast_precipitation_range(forecast)
+    max_precip = (u'precip', 0)
+    for value in precip_range:
+        if value[1] >= max_precip[1]:
+            max_precip = value
+    return max_precip
 
 def get_forecast_temps(forecast):
     measurement = get_measurement_type(units_code)
