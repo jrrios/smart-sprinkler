@@ -25,7 +25,7 @@ class Operations:
         return current_temp, recent_precip, recent_snow, forecast_min_temp, forecast_max_temp, forecast_precip
 
     def get_water_restrictions(self):
-        restrictions = schedule.get_if_watering_restriction()
+        restrictions = schedule.get_if_watering_restricted()
         return restrictions
 
     def get_arduino_values(self):
