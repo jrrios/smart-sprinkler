@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from sprinkler_operations.operations import Operations
 from .forms import *
 
 # Create your views here.
@@ -19,5 +19,18 @@ def dashboard(request):
 		property_type = int(*request.POST.get('property_type'))
 		# super swain code here
 
+		current_temp, recent_precip, forecast_precip = Operations.get_weather()
+
+		if (form.is_valid()):
+			conditions = {
+				"current_temp": current_temp,
+				"recent_precip": recent_precip,
+				"forecast_precip": forecast_precip,
+				 
+			}
+
+			context ["conditions"]=conditions
+
+			print conditions
 
 	return render (request, 'dashboard.html', context)

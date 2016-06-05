@@ -8,7 +8,7 @@ class PropertyForm(forms.Form):
 	address_digit = forms.IntegerField(validators=[MaxValueValidator(9)])
 	property_type = forms.IntegerField(validators=[MaxValueValidator(9)])
 
-	def __init__(self, *args, **kwargs):
-		super(PropertyForm, self).__init__(*args, **kwargs)
-		self.helper = FormHelper()
-		self.helper.field_class = 'input-group'
+	# def __init__(self, *args, **kwargs):
+	# 	super(PropertyForm, self).__init__(*args, **kwargs)
+	# 	self.helper = FormHelper()
+	# 	self.helper.field_class = 'input-group'
