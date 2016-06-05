@@ -7,9 +7,10 @@ import schedule
 class Operations:
 
     def get_weather(self):
-        address = "St. Edwards University, Austin, TX"
+        address = "St. Edwards, 3001 S. Congress, Austin, TX"
 
-        place = geocoding.get_lat_lon(address)
+        geocode = geocoding.get_geocoding(address)
+        place = geocoding.get_lat_lon(geocode)
         latitude = place[u'lat']
         longitude = place[u'lng']
 

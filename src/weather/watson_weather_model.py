@@ -8,6 +8,7 @@ import geocoding
 language_code = 'en-US'
 units_code = 'e' # English (imperial) units
 forecast_range = 6 # Number of hours of forecasts to look at
+history_range = 24 # Number of hours of history to look at
 
 # Service constants
 service_username = 'cf2b9be6-e01e-454f-8f52-dd9ee9f12282'
@@ -49,7 +50,7 @@ def get_recent_precip_range(hours):
 
 def get_recent_precipitation(conditions):
     measurement = get_measurement_type(units_code)
-    range = get_recent_precip_range(forecast_range)
+    range = get_recent_precip_range(history_range)
     return conditions[u'observation'][measurement][range]
 
 
@@ -65,7 +66,7 @@ def get_recent_snow_range(hours):
 
 def get_recent_snow(conditions):
     measurement = get_measurement_type(units_code)
-    range = get_recent_snow_range(forecast_range)
+    range = get_recent_snow_range(history_range)
     return conditions[u'observation'][measurement][range]
 
 
@@ -102,7 +103,8 @@ def get_max_forecast_temp(forecast):
 
 def example_for_location(address):
     print("\nWeather Conditions at "+address)
-    place = geocoding.get_lat_lon(address)
+    geocode = geocoding.get_geocoding(address)
+    place = geocoding.get_lat_lon(geocode)
     latitude = place[u'lat']
     longitude = place[u'lng']
 
@@ -118,7 +120,7 @@ def example_for_location(address):
 
 
 def example_usage():
-    example_for_location("Austin, Texas")
+    example_for_location("St. Edwards, 3001 S. Congress, Austin, Texas")
     example_for_location("McMurdo Station, Antartica")
     example_for_location("Gobi Desert")
 
